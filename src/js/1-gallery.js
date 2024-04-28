@@ -90,14 +90,15 @@ const markup = images.reduce((html, { original, preview, description }) => {
 galleryEl.insertAdjacentHTML('beforeend', markup);
 
 const lightbox = new SimpleLightbox('.gallery a', {
-  captionsData: 'alt',
-  captionDelay: 250,
+	captionPosition: 'bottom',
+	captionsData: 'alt',
+	captionDelay: 250,
 });
 
-const buttonArrow = document.querySelector('button');
 lightbox.on('shown.simplelightbox', function () {
-  const buttons = document.querySelectorAll('button');
-  const counter = document.querySelector('.sl-counter');
-  buttons.forEach(value => (value.style.color = 'white'));
-  counter.style.color = 'white';
+	const buttons = document.querySelectorAll('button');
+	buttons.forEach(value => (value.style.color = 'white'));
+	
+	const counter = document.querySelector('.sl-counter');
+	counter.style.color = 'white';
 });
