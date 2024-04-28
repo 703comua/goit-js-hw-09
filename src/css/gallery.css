@@ -1,3 +1,6 @@
+body {
+	font-family: Montserrat;
+}
 .gallery {
 	display: flex;
 	justify-content: center;
@@ -26,6 +29,5 @@
 }
 
 .simple-lightbox {
-	background-color: #2e2f42;
-	opacity: .9;
+	background: rgba(46, 47, 66, 0.80);
 }
