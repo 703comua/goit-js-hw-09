@@ -90,18 +90,8 @@ const markup = images.reduce((html, { original, preview, description }) => {
 galleryEl.insertAdjacentHTML('beforeend', markup);
 
 const lightbox = new SimpleLightbox('.gallery a', {
-  captionSelector: 'img',
-  captions: true,
-  captionType: 'attr',
   captionsData: 'alt',
-  captionPosition: 'bottom',
   captionDelay: 250,
-  overlayOpacity: 1,
-  className: 'custom-lightbox',
-  docClose: true,
-  animationSpeed: 500,
-  fadeSpeed: 500,
-  rtl: true,
 });
 
 const buttonArrow = document.querySelector('button');
