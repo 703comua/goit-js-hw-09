@@ -16,6 +16,9 @@ if (localStorage.getItem(feedbackFormState)) {
 
   email.value = emailFromLS;
   textarea.value = messageFromLS;
+
+  formData.email = emailFromLS;
+  formData.message = messageFromLS;
 }
 
 form.addEventListener('input', event => {
@@ -35,6 +38,8 @@ form.addEventListener('submit', event => {
   } else {
     console.log(formData);
     localStorage.removeItem(feedbackFormState);
+    formData.email = '';
+    formData.message = '';
     form.reset();
   }
 });
